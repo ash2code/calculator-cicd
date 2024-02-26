@@ -12,5 +12,10 @@ pipeline {
         url: 'https://github.com/ash2code/calculator-cicd.git'
       }
     }
+    stage ('code-build') {
+      steps {
+        sh 'mvn clean package'
+      }
+    }
   }
 }
